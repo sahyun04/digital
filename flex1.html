@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+     :root {
+  
+  font-size: 10px;
+  background: #e0e0e0;
+}
+
+::selection {
+  background: #2f2f2f;
+  color: #d8d8d8;
+}
+
+body {
+  margin: 0;
+  display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font: 1.6rem/1.5 Arial, sans-serif;
+  letter-spacing: -0.05em;
+}
+
+figure {
+  margin: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+video {
+ margin-top: -13px;
+  vertical-align: top;
+}
+
+[hidden] {
+  display: none !important;
+}
+/* ------------------------------------------------
+ * 브라우저 디자인 */
+.browser {
+     display: flex;
+    flex-direction: column;
+  flex-flow: column;
+  /* contenxt = 960px + padding: 1.4rem */
+  flex: 0 0 90vw;
+ max-width: calc(960px + (1.4rem * 2));
+  min-width: 100%;
+  min-height: 20vh;
+  border-radius: 0.6rem;
+  background: #fff;
+   }
+
+.browser-body {
+     display: flex;
+    flex-direction: column;
+  flex: 1 0 10%;
+ /* padding: 1.4rem;*/
+  
+        }
+
+.browser-view {
+  flex: 1 0 50%;
+}
+
+        /* ------------------------------------------------
+ * 유연한 미디어 실습 */
+
+.rwd-video {
+  width: 100%;
+    height: auto;
+}
+
+
+.rwd-media-container {
+  position: relative;
+   height:120px;
+    overflow: hidden;
+    max-width: 100%;
+  height: 0 !important;
+ padding-top: calc(9/16*100%);
+  
+}
+
+.rwd-media {
+  position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height:80%;
+    transform: translateX(-50%);
+}
+        
+.nav{
+     position: absolute;
+     justify-content: space-between;
+     width: 900px;
+     height: 50px;
+     margin-left: 50%;
+          }
+  .nav ul{
+      display: flex;
+      list-style: none;
+     width: 800px;
+             }
+ .nav li{
+     display: flex;
+    float: left;
+     margin-left: -2%;
+     margin-right: 2%;
+     justify-content: center;
+     align-items: center;
+             }
+ .nav a{
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.2rem;
+      width:80px;
+      padding: 10px;
+     text-align: center;
+    z-index: 1;
+          }
+    .nav a:hover{
+        color: aqua;
+          } 
+       
+        .title-1{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            z-index: 10;
+            justify-content: center;
+            align-items: center;
+        }
+        .title-1 h1{
+            font-size: 6rem;
+            color: #fff;
+                }
+         .title-2{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top:50%;
+             left: 42%;
+            z-index: 10;
+            justify-content: center;
+            align-items: center;
+        }
+        .title-2 h3{
+           font-size: 2.5rem;
+            color: #fff;
+                   }
+     .browser-bottom {
+         display: flex;
+        flex-direction: column;
+        justify-content: center; 
+         align-items: center;
+        margin-top:-11%;
+                  }
+       
+     .bottom-textbox{
+         flex: 1;
+        display: flex;
+        text-align: center;
+             }
+     .bottom-textbox p{
+        font-size: 2rem;
+          padding-top: 10%;  
+       line-height: 2em;
+          }
+      .bottom-imgbox{
+         flex: 1;
+        display: flex;
+         margin-top: -5%;
+          }    
+ 
+    </style>
+</head>
+<body>
+     <div class="browser">
+  <div class="browser-body">
+
+       <div class="nav">
+      <ul>
+          <li><a href="#">Services </a></li>
+          <li><a href="#">Cllent Storles</a></li>
+          <li><a href="#">News </a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Investors</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+      </div>
+
+  <div class="browser-view rwd-media-container">
+
+<div class="title">
+   <div class="title-1">
+       <h1>Powering music</h1> 
+      </div>
+       <div class="title-2">
+        <h3>streaming / curation / intelligence</h3>
+    </div>
+</div>
+
+ 
+      <!-- 동영상 iframe -->
+             
+    <iframe class="rwd-media"  width="560" height="315" src="https://www.youtube.com/embed/EuMHZxs_C0c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div>                 
+    </div>
+    
+     <div class="browser-bottom">
+       <div class="bottom-textbox">
+        <p>7digital creates and implements white label music solutions that transform <br> the digital listening experience, bringing brands, music and listeners together. <br>From radio or on-demand streaming services to content curation and rights <br>management, we handle it all.<br><br>
+        <img src="7-logo.png" width="200" height="50" alt=""></p>
+    </div>
+    <div class="bottom-imgbox">
+        <img src="7-digital.png" height="500" alt="">
+    </div>
+</div>
+    </div> 
+
+</body>
+</html>
